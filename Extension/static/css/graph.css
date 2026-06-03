@@ -1,0 +1,446 @@
+/* Graph Page Styles */
+
+/* Body and Background */
+.graph-body {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 86, 179, 0.1) 100%);
+    min-height: 100vh;
+}
+
+.graph-hero-section {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9) 0%, rgba(0, 86, 179, 0.9) 100%),
+                url('../img/carousel-2.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 100px 0;
+}
+
+.graph-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8) 0%, rgba(0, 86, 179, 0.8) 100%);
+    z-index: 1;
+}
+
+.graph-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styles */
+.graph-header h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.graph-header p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Graph Content Container */
+.graph-content-container {
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.graph-display-section {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.graph-header-info h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.graph-header-info p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Graph Image Container */
+.graph-image-container {
+    margin: 30px 0;
+}
+
+.graph-wrapper {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 123, 255, 0.1);
+    overflow: hidden;
+}
+
+.graph-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.graph-wrapper:hover .graph-image {
+    transform: scale(1.02);
+}
+
+.graph-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.graph-wrapper:hover .graph-overlay {
+    opacity: 1;
+}
+
+.graph-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.graph-actions .btn {
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.graph-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Graph Analysis Cards */
+.graph-analysis {
+    margin-top: 40px;
+}
+
+.analysis-card {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+.analysis-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15);
+}
+
+.analysis-card .analysis-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.analysis-card:hover .analysis-icon {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.analysis-card .analysis-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.analysis-card h5 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.analysis-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.performance-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+
+.indicator-label {
+    color: #666;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.indicator-value {
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.indicator-value.good {
+    background: #d4edda;
+    color: #155724;
+}
+
+.indicator-value.excellent {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.indicator-value.outstanding {
+    background: #fff3cd;
+    color: #856404;
+}
+
+/* Action Buttons */
+.graph-actions-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #e9ecef;
+}
+
+.graph-actions-section .btn {
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.graph-actions-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.graph-actions-section .btn i {
+    margin-right: 10px;
+}
+
+/* No Data State */
+.no-data-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.no-data-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+.no-data-icon i {
+    font-size: 48px;
+    color: white;
+}
+
+.no-data-container h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.no-data-container p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.no-data-container .btn {
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.no-data-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* Footer */
+.graph-footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.graph-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.graph-footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .graph-hero-section {
+        padding: 80px 0;
+        min-height: auto;
+    }
+    
+    .graph-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .graph-display-section {
+        padding: 25px 20px;
+        margin: 20px 10px;
+    }
+    
+    .graph-wrapper {
+        padding: 20px 15px;
+    }
+    
+    .analysis-card {
+        padding: 25px 20px;
+        margin-bottom: 20px;
+    }
+    
+    .analysis-card .analysis-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .analysis-card .analysis-icon i {
+        font-size: 24px;
+    }
+    
+    .graph-actions-section .btn {
+        min-width: 150px;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .no-data-container {
+        padding: 40px 25px;
+        margin: 20px 10px;
+    }
+    
+    .no-data-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .no-data-icon i {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .graph-header h1 {
+        font-size: 2rem;
+    }
+    
+    .graph-display-section {
+        padding: 20px 15px;
+    }
+    
+    .graph-wrapper {
+        padding: 15px 10px;
+    }
+    
+    .graph-actions-section {
+        flex-direction: column;
+    }
+    
+    .graph-actions-section .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+

@@ -1,0 +1,425 @@
+/* LoadModel Page Styles */
+
+/* Body and Background */
+.loadmodel-body {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.1) 0%, rgba(0, 86, 179, 0.1) 100%);
+    min-height: 100vh;
+}
+
+.loadmodel-hero-section {
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.9) 0%, rgba(0, 86, 179, 0.9) 100%),
+                url('../img/carousel-2.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 100px 0;
+}
+
+.loadmodel-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8) 0%, rgba(0, 86, 179, 0.8) 100%);
+    z-index: 1;
+}
+
+.loadmodel-hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styles */
+.loadmodel-header h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.loadmodel-header p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+/* Performance Container */
+.performance-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.performance-header h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.performance-header p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Performance Table Styling */
+.performance-table-container {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.performance-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.performance-table-container table th {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    padding: 20px 15px;
+    text-align: center;
+    border: none;
+}
+
+.performance-table-container table td {
+    padding: 18px 15px;
+    text-align: center;
+    border-bottom: 1px solid #e9ecef;
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.performance-table-container table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.performance-table-container table tr:hover {
+    background-color: #e3f2fd;
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+}
+
+.performance-table-container table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Algorithm Name Styling */
+.performance-table-container table td:first-child {
+    font-weight: 700;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Metric Value Styling */
+.performance-table-container table td:not(:first-child) {
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #28a745;
+}
+
+/* Performance Insights */
+.performance-insights {
+    margin-top: 40px;
+}
+
+.insight-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(0, 123, 255, 0.1);
+}
+
+.insight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 123, 255, 0.15);
+}
+
+.insight-card .insight-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.insight-card:hover .insight-icon {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.insight-card .insight-icon i {
+    font-size: 32px;
+    color: white;
+}
+
+.insight-card h5 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.insight-card p {
+    color: #666;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 40px;
+}
+
+.action-buttons .btn {
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+.action-buttons .btn i {
+    margin-right: 10px;
+}
+
+/* No Data State */
+.no-data-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.no-data-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 30px;
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 2s infinite;
+}
+
+.no-data-icon i {
+    font-size: 48px;
+    color: white;
+}
+
+.no-data-container h3 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.no-data-container p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.no-data-container .btn {
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.no-data-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* Footer */
+.loadmodel-footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.loadmodel-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.loadmodel-footer a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .loadmodel-hero-section {
+        padding: 80px 0;
+        min-height: auto;
+    }
+    
+    .loadmodel-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .performance-container {
+        padding: 25px 20px;
+        margin: 20px 10px;
+    }
+    
+    .performance-table-container {
+        padding: 20px 15px;
+        overflow-x: auto;
+    }
+    
+    .performance-table-container table th,
+    .performance-table-container table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .insight-card {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .insight-card .insight-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .insight-card .insight-icon i {
+        font-size: 24px;
+    }
+    
+    .action-buttons .btn {
+        min-width: 150px;
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .no-data-container {
+        padding: 40px 25px;
+        margin: 20px 10px;
+    }
+    
+    .no-data-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .no-data-icon i {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .loadmodel-header h1 {
+        font-size: 2rem;
+    }
+    
+    .performance-container {
+        padding: 20px 15px;
+    }
+    
+    .performance-table-container {
+        padding: 15px 10px;
+    }
+    
+    .performance-table-container table th,
+    .performance-table-container table td {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+    
+    .action-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
